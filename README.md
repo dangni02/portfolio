@@ -8,8 +8,12 @@
 portfolio/
 ├── company-a/           # 기존 회사용 포트폴리오
 │   └── index.html
-├── fnf/                 # F&F 지원용 포트폴리오
-│   └── index.html
+├── fnf/                 # F&F 지원용 포트폴리오 (여러 페이지 웹사이트)
+│   ├── index.html       # 홈: 소개 · 경력 · 주요 프로젝트 · 기술 · 학력
+│   ├── projects/        # 프로젝트별 상세 페이지 3개
+│   ├── css/style.css
+│   ├── assets/          # 그래프 이미지, 논문 PDF
+│   └── vercel.json      # cleanUrls (/projects/vlm-qa)
 └── README.md
 ```
 
@@ -36,4 +40,4 @@ portfolio/
 - 단일 GitHub 저장소 유지
 - 각 포트폴리오는 독립적인 Vercel 프로젝트로 배포
 - 각 폴더는 완전히 독립적으로 작동 (외부 의존성 없음)
-- 모든 스타일과 이미지는 Base64 인코딩 또는 CDN을 통해 제공
+- company-a는 단일 HTML(Base64 내장), fnf는 HTML/CSS/에셋 분리 구조 (폰트는 Pretendard CDN)
